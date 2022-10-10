@@ -218,11 +218,27 @@ console.log(names);
 
 //mutate array
 names[1] = 'ben'
-names[names.length] = 'mary'
+names[names.length] = 'mary'  // this is used to check total number of element in an array
 console.log(names);
 
 /*Array methods*/
 var john = ['john', 'smith', 'teacher', false]
 console.log(john);
+
 john.push('blue') // the method push adds an element at the end of the array
 console.log(john);
+
+john.unshift('Mr.')  //this method is used to add an element to the begining of the array
+console.log(john);
+
+john.pop()  // this will remove the elements from the end (from the last one)
+console.log(john);
+
+john.shift()  // this method removes element from the begining
+console.log(john);
+
+console.log(john.indexOf(1990)); // this shows you the position of an element in an array
+
+var isDesigner = john.indexOf('designer') === -1 ? 'john is not a designer' : 'john is a designer'
+
+console.log(isDesigner);
