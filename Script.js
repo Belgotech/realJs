@@ -133,3 +133,96 @@ switch (true) {
     default:
         console.log(firstName +' is a man');;
 }
+
+/* truthy and falsy values
+falsy values = null, 0, '', undefined, NaN(not a number)
+truthy values = any values that are not falsy values
+*/
+
+
+// function
+
+function calculateAge(birthYear){
+    return 2022 - birthYear
+}
+
+var ageJohn = calculateAge(1990)
+var ageRadom = calculateAge(1989)
+var ageNigeria = calculateAge(1960)
+console.log(ageJohn, ageRadom, ageNigeria);
+
+function yearUntilRetirement (year, firstName){
+    var age = calculateAge(year)
+    var retirement = 65 - age
+    console.log(firstName + ' retires in ' + retirement + ' years.');
+}
+
+yearUntilRetirement(1990, 'john')
+yearUntilRetirement(1948, 'random')
+yearUntilRetirement(1960, 'Nigeria')
+
+
+// function Advanced
+function yearUntilRetirement2 (year, firstName){
+    var age = calculateAge(year)
+    var retirement = 65 - age
+    retirement > 0? console.log(firstName + ' retires in ' + retirement + ' years.') : console.log(firstName +' is already retired');
+    // if (retirement > 0){
+    //     console.log(firstName + ' retires in ' + retirement + ' years.')
+    // }else {
+    //     console.log(firstName +' is already retired');
+    // }
+}
+
+yearUntilRetirement2(1990, 'john')
+yearUntilRetirement2(1948, 'random2')
+yearUntilRetirement2(1960, 'Nigeria')
+
+// function statement and expression
+
+/* function declaration = function whatDoYouDo(job, firstName){
+
+}
+*/
+
+/* function expression */
+var whatDoYouDo = function(job, firstName){
+    switch(job){
+        case 'teacher':
+            return firstName + ' teaches people how to code'
+        case 'designer/developer':
+            return firstName +' designs beautiful, interactive and responsive websites'
+        case 'ceo':
+            return firstName + ' is the ceo of belgo-technologies'
+        default:
+            return firstName + ' does something else'
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'beloved'));
+console.log(whatDoYouDo('designer/developer', 'beloved'));
+console.log(whatDoYouDo('ceo', 'beloved'));
+console.log(whatDoYouDo('Ceo', 'beloved'));
+
+// note : javaScript expression are those piece of code that produces a value
+// note : javaScript statement are peice of code that performs an action but dont produce a result immediately 
+
+/*===============ARRAYS===============*/
+// initialize array
+var names = ['john', 'jane', 'mark']
+var year = new Array(1990, 1948, 1989)
+
+console.log(names[2]);
+console.log(names.length);
+console.log(names);
+
+//mutate array
+names[1] = 'ben'
+names[names.length] = 'mary'
+console.log(names);
+
+/*Array methods*/
+var john = ['john', 'smith', 'teacher', false]
+console.log(john);
+john.push('blue') // the method push adds an element at the end of the array
+console.log(john);
