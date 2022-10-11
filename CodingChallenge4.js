@@ -20,6 +20,7 @@
 //   console.log("john's BMI is greater than mark's BMI");
 // }
 
+
 var mark = {
   firstName: "mark",
   lastName: "smith",
@@ -33,23 +34,28 @@ var mark = {
 mark.calculateBMI()
 // console.log(mark);
 
-var john = {
-    firstName: 'john',
-    lastName: 'smith',
-    mass: 1000,
-    height: 10,
-    calculateBMI: function(){
-    this.BMI = this.mass / (this.height * this.height);
-    }
-}
+var Bmi = prompt()
 
-john.calculateBMI()
-// console.log(john);
+mark.bmi2 = Bmi
+console.log(mark);
 
-if(john.BMI > mark.BMI){
-    console.log(john.firstName + ' has the higher BMI of ' + john.BMI);
-}else if(mark.BMI > john.BMI){
-    console.log(mark.firstName + ' has the higher BMI of ' + mark.BMI);
-}else{
-    console.log(mark.firstName + ' and ' + john.firstName + ' have the same BMI ');
-}
+// var john = {
+//     firstName: 'john',
+//     lastName: 'smith',
+//     mass: 1000,
+//     height: 10,
+//     calculateBMI: function(){
+//     this.BMI = this.mass / (this.height * this.height);
+//     }
+// }
+
+// john.calculateBMI()
+// // console.log(john);
+
+// if(john.BMI > mark.BMI){
+//     console.log(john.firstName + ' has the higher BMI of ' + john.BMI);
+// }else if(mark.BMI > john.BMI){
+//     console.log(mark.firstName + ' has the higher BMI of ' + mark.BMI);
+// }else{
+//     console.log(mark.firstName + ' and ' + john.firstName + ' have the same BMI ');
+// }
