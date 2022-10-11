@@ -34,28 +34,48 @@ var mark = {
 mark.calculateBMI()
 // console.log(mark);
 
-var Bmi = prompt()
+var john = {
+    firstName: 'john',
+    lastName: 'smith',
+    mass: 1000,
+    height: 10,
+    calculateBMI: function(){
+    this.BMI = this.mass / (this.height * this.height);
+    }
+}
 
-mark.bmi2 = Bmi
-console.log(mark);
+john.calculateBMI()
+// console.log(john);
 
-// var john = {
-//     firstName: 'john',
-//     lastName: 'smith',
-//     mass: 1000,
-//     height: 10,
-//     calculateBMI: function(){
-//     this.BMI = this.mass / (this.height * this.height);
-//     }
-// }
+if(john.BMI > mark.BMI){
+    console.log(john.firstName + ' has the higher BMI of ' + john.BMI);
+}else if(mark.BMI > john.BMI){
+    console.log(mark.firstName + ' has the higher BMI of ' + mark.BMI);
+}else{
+    console.log(mark.firstName + ' and ' + john.firstName + ' have the same BMI ');
+}
 
-// john.calculateBMI()
-// // console.log(john);
 
-// if(john.BMI > mark.BMI){
-//     console.log(john.firstName + ' has the higher BMI of ' + john.BMI);
-// }else if(mark.BMI > john.BMI){
-//     console.log(mark.firstName + ' has the higher BMI of ' + mark.BMI);
-// }else{
-//     console.log(mark.firstName + ' and ' + john.firstName + ' have the same BMI ');
-// }
+
+/*=========EXTRA=========*/
+
+// var mass = prompt('what is your mass')
+// var height = prompt('what is your height')
+
+// mark.mass = mass
+// mark.height = height
+
+// var mark = {
+//     firstName: "mark",
+//     lastName: "smith",
+//     // mass: 1000,
+//     // height: 10,
+//     calculateBMI: function () {
+//       this.bmi = this.mass / (this.height * this.height);
+//     },
+//   };
+  
+//   mark.calculateBMI()
+//   // console.log(mark);
+
+//   console.log(mark);
