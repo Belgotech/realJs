@@ -1,3 +1,4 @@
+// coding Challenge 2
 var johnAverage = (89+120+103) / 3  //100
 var markAverage = (116+123+94) /3  //100
 var sameAverage = johnAverage + markAverage

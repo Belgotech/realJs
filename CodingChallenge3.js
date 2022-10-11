@@ -1,3 +1,4 @@
+// Coding Challenge 4
 function tipCalculator (bills){
     if(bills < 50){
         return bills * 0.2

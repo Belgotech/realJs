@@ -242,3 +242,88 @@ console.log(john.indexOf(1990)); // this shows you the position of an element in
 var isDesigner = john.indexOf('designer') === -1 ? 'john is not a designer' : 'john is a designer'
 
 console.log(isDesigner);
+
+
+
+/*==============OBJECTS===============*/
+
+// declaration of an javaScript Object (object Literal and new object syntax)
+// object literal
+var john = {
+    firstName: 'john',
+    lastName: 'smith',
+    birthYear: 1990,
+    isMarried: false,
+    job: 'teacher',
+    family: ['jane', 'mark', 'bob', 'emily']
+}
+
+// Accessing an element from a javaScript object
+console.log(john.firstName);
+console.log(john['firstN ame']);
+
+var x = 'isMarried'
+console.log(john[x]);
+console.log(x);
+console.log(john);
+
+john.job = `designer`
+john['isMarried'] = `true`
+console.log(john);
+
+
+// new object syntax
+var jane = new Object();
+jane.firstName = 'jane',
+jane['lastName'] = 'smith',
+jane.birthYear = 1980
+
+console.log(jane);
+
+/*================OBJECT AND METHODS===============*/
+// simple method (without the 'this' keyword)
+var john = {
+    firstName: 'john',
+    lastName: 'smith',
+    birthYear: 1990,
+    isMarried: false,
+    job: 'teacher',
+    family: ['jane', 'mark', 'bob', 'emily'],
+    calculateAge: function(birthYear){
+        return 2022 - birthYear
+    }
+}
+
+console.log(john.calculateAge(1990));
+
+// complex method (using the 'this' keyword)
+var john = {
+    firstName: 'john',
+    lastName: 'smith',
+    birthYear: 1994,
+    isMarried: false,
+    job: 'teacher',
+    family: ['jane', 'mark', 'bob', 'emily'],
+    calculateAge: function(){
+        return 2022 - this.birthYear
+    }
+}
+console.log(john.calculateAge());
+
+// more complex method (storing the result of the method in the object)
+var john = {
+    firstName: 'john',
+    lastName: 'smith',
+    birthYear: 1994,
+    isMarried: false,
+    job: 'teacher',
+    family: ['jane', 'mark', 'bob', 'emily'],
+    calculateAge: function(){
+        this.age = 2022 - this.birthYear
+    }
+}
+
+// john.age = john.calculateAge()
+
+john.calculateAge()
+console.log(john);
